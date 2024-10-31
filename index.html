@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Firebase Login System</title>
+  <title>Firebase 이메일 로그인 시스템</title>
+  <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js"></script>
 </head>
 <body>
-  <h1>회원가입 및 로그인</h1>
+  <h1>Firebase 로그인 시스템</h1>
   
   <!-- 회원가입 폼 -->
   <div>
@@ -18,12 +19,19 @@
     <button onclick="signUp()">회원가입</button>
   </div>
 
-  <!-- 로그인 폼 -->
+  <!-- 비밀번호 로그인 폼 -->
   <div>
     <h2>로그인</h2>
     <input type="email" id="loginEmail" placeholder="이메일">
     <input type="password" id="loginPassword" placeholder="비밀번호">
     <button onclick="login()">로그인</button>
+  </div>
+
+  <!-- 이메일 링크 로그인 폼 -->
+  <div>
+    <h2>이메일 링크로 로그인</h2>
+    <input type="email" id="linkLoginEmail" placeholder="이메일">
+    <button onclick="signInWithEmailLink()">로그인 링크 전송</button>
   </div>
 
   <script src="app.js"></script>
