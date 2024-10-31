@@ -1,16 +1,16 @@
 // Import Firebase SDKs for App and Auth
-import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
 
 // Firebase 설정 - 자신의 Firebase 설정으로 교체해야 합니다.
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
-  measurementId: "YOUR_MEASUREMENT_ID"
+  apiKey: "AIzaSyAG77bT0YaKUX33IrSjV3cc4N3nKdC_dY4",
+  authDomain: "testlogin-8f196.firebaseapp.com",
+  projectId: "testlogin-8f196",
+  storageBucket: "testlogin-8f196.appspot.com",
+  messagingSenderId: "844746942507",
+  appId: "1:844746942507:web:2d15058ffd6f692243626e",
+  measurementId: "G-20WL1R0QYG"
 };
 
 // Initialize Firebase
@@ -18,7 +18,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 // 회원가입 함수
-async function signUp() {
+window.signUp = async function() {
   const email = document.getElementById("signupEmail").value;
   const password = document.getElementById("signupPassword").value;
 
@@ -34,10 +34,10 @@ async function signUp() {
     console.error("회원가입 오류:", error.message);
     alert("회원가입 실패: " + error.message);
   }
-}
+};
 
 // 로그인 함수
-async function login() {
+window.login = async function() {
   const email = document.getElementById("loginEmail").value;
   const password = document.getElementById("loginPassword").value;
 
@@ -54,6 +54,4 @@ async function login() {
     console.error("로그인 오류:", error.message);
     alert("로그인 실패: " + error.message);
   }
-}
-
-export { signUp, login };
+};
