@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Firebase 이메일 로그인 시스템</title>
-  <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js"></script>
+  <title>Firebase 모듈화 로그인 시스템</title>
 </head>
 <body>
   <h1>Firebase 로그인 시스템</h1>
@@ -27,13 +24,7 @@
     <button onclick="login()">로그인</button>
   </div>
 
-  <!-- 이메일 링크 로그인 폼 -->
-  <div>
-    <h2>이메일 링크로 로그인</h2>
-    <input type="email" id="linkLoginEmail" placeholder="이메일">
-    <button onclick="signInWithEmailLink()">로그인 링크 전송</button>
-  </div>
-
-  <script src="app.js"></script>
+  <!-- Firebase 초기화 및 기능 연결 -->
+  <script type="module" src="app.js"></script>
 </body>
 </html>
